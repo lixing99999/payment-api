@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha -r ts-node/register 'test/*.ts'",
+    "coverage": "nyc npm run test",
     "dev": "ts-node-dev index.ts",
     "start": "ts-node index.ts"
   },
@@ -49,6 +50,7 @@
     "chai": "^4.3.4",
     "eslint": "^7.12.1",
     "mocha": "^8.3.2",
+    "nyc": "^15.1.0",
     "ts-node-dev": "^1.0.0-pre.44",
     "typeorm-model-generator": "^0.4.4"
   }
