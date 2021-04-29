@@ -9,7 +9,7 @@ const _ = require('lodash');
 const paymentRepo = getCustomRepository(PaymentRepository);
 
 export const createPayment = async ({ payload, auth }: Request, h: ResponseToolkit): Promise<ResponseObject> => {
-  const payment = await paymentRepo.create(user.id, <Payments>payload);
+  const payment = await paymentRepo.save(user.id, <Payments>payload);
   return h.response(payment).code(200);
 };
 
